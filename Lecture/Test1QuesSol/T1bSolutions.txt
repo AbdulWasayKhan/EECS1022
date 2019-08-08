@@ -1,0 +1,77 @@
+EECS1022 Summer 2019 Test 1 Version B (evening) Solutions
+
+Question  1 
+Correct response  is x,y,Math,pow
+
+Question  2 
+Correct response is "noOfStudents"
+
+Question  3 
+Correct response is "all of the above are true"
+
+Question  4 
+Correct response is "returns +Infinity"
+
+Question  5 
+Correct response is "int"
+
+Question  6 
+Correct response is "it may have both static and non-static methods"
+
+Question  7 
+Correct response is "the view is known as an activity"
+
+Question  8 
+Correct response is "x will be set to +Infinity"
+
+Question  9 
+Correct response is "12"
+
+Question  10 
+Correct response is "3"
+
+Question  11 
+Correct response is "false"
+
+Question  12 
+Correct response is "will be stored at addresses 500 through 503"
+
+Question  13 
+Correct response is  "-"
+
+Question  14 
+Correct response is "int"
+
+Question  15 
+Correct response is "k *=2;"
+
+Question  16
+    public static int sumCubes(int x, int y, int z){
+        return x * x * x + y * y * y + z * z * z;
+    }
+
+Question  17
+    public static String celcius2Farenheit(double degrees){
+        return String.format("%.2f", 9.0/5.0 * degrees + 32);
+    }
+    
+Question  18
+    public static String compute(int x){
+        return String.format("The natural logarithm of %d is %.4f", x, Math.log(x));
+    }
+
+Question  19
+    public static String getBMI(double weight, double height){
+        final double KG_PER_POUND =  0.454;
+        double weightInLb = weight / KG_PER_POUND;
+        String result = "Your weight is " + String.format("%.0f", weightInLb);
+        result = result + " lb, your height is " + Utility.m2FtInch(height);
+        double bmi = weight / (height * height);
+        result = result + ", and your BMI is " + String.format("%.1f", bmi) + ".";
+        return  result;
+    }
+
+Question  20
+    public static boolean getsBonus(int yearsOfService, double sales){
+        return yearsOfService % 5 == 0 || yearsOfService >= 25 || sales > 50000.0;
+    }

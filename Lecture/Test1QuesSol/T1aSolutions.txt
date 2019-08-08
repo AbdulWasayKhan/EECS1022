@@ -1,0 +1,78 @@
+EECS1022 Summer 2019 Test 1 Version A (afternoon) Solutions
+
+Question  1
+Correct response  is 15,0.33,"%.f"
+
+Question  2 
+Correct response is "NO_OF_STUDENTS"
+
+Question  3 
+Correct response is "the API specifies how the class's methods are implemented"
+
+Question  4 
+Correct response is "throws an exception"
+
+Question  5 
+Correct response is "double"
+
+Question  6 
+Correct response is "none of the above"
+
+Question  7 
+Correct response is "none of the above"
+
+Question  8 
+Correct response is "15"
+
+Question  9 
+Correct response is "XXX"
+
+Question  10 
+Correct response is "3.5"
+
+Question  11 
+Correct response is "false"
+
+Question  12 
+Correct response is "will be stored at addresses 500 through 503"
+
+Question  13 
+Correct response is  "/"
+
+Question  14 
+Correct response is "none of the above"
+
+Question  15 
+Correct response is "none of the above"
+
+Question  16
+    public static int compute(int x, int y) {
+        return x * x + y * y - x * y;
+    }
+
+Question  17
+    public static String farenheit2Celsius(double degrees) {
+        return String.format("%.2f", (degrees - 32) * 5 / 9);
+    }
+
+Question  18
+    public static String compute(int x){
+        return String.format("The base 10 logarithm of %d is %.3f", x, Math.log10(x));
+    }
+
+Question  19
+    public static String getBMI(double weight, double height){
+        final double KG_PER_POUND =  0.454;
+        double weightInLb = weight / KG_PER_POUND;
+        String result = "Your weight is " + String.format("%.0f", weightInLb);
+        result = result + " lb, your height is " + Utility.m2FtInch(height);
+        double bmi = weight / (height * height);
+        result = result + ", and your BMI is " + String.format("%.1f", bmi) + ".";
+        return  result;
+    }
+    
+Question  20
+    public static boolean getsRaise(int monthsWorked, double rating){
+        return monthsWorked >= 6 && rating > 7 || monthsWorked >= 12 && rating > 5;
+    }
+

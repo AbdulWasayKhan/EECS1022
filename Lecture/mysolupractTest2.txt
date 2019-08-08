@@ -1,0 +1,63 @@
+qno1).(b)2
+qno2).(d)51
+qno3). -4 ans by prof is -6 how?
+qno4). 8
+qno5). 2
+qno6). 5
+qno7). a
+qno8). 4
+qno9). Fri
+qno10). 1
+qno11). a
+qno12). 2
+qno13). nnc
+qno14). a)four elements if use split in string "Montreal is ..."
+qno15). (c) n is 0, because of arithmetic exception dividing 2/ 0 gives arithmetic exception.
+
+qno16). double result = 0.0;
+        for(int i = 1; i <= n; i++)
+        {
+            result += 1.0/i;
+        }
+        return String.format("%.4f",result);
+
+qno17). String result = "";
+        for(int i = 1; i <= n; i++)
+        {
+            result = result + s;
+        }
+        return result;
+
+qno18). String result = "";
+  String pos = s1.indexOf(s2);
+  if(pos >= 0)
+ {
+   result = s1.substring(s2);
+ }
+ return result;
+  
+
+qno19). String result = "";
+        int positions = s1.indexOf(s2);
+        if(positions >= 0)
+        {
+            result = result + positions;
+        }
+        positions = s1.indexOf(s2,positions+1);
+        while(positions >= 0) {
+            result = result + "," + positions;
+            positions = s1.indexOf(s2,positions+1);
+        }
+        return result;
+
+qno20). String regex = "[A-Z][A-Z[A-Z][A-Z]?[0-9][0-9][0-9]]";
+        Pattern platePattern = Pattern.compile(regex);
+        Matcher patternMatcher = platePattern.matcher(s);
+        int result = -1;
+        if (patternMatcher.find()) {
+            result = patternMatcher.start();
+        }
+        return result;
+
+
+qno20).
