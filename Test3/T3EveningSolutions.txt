@@ -1,0 +1,96 @@
+EECS1022 S19 Test 3 Version B Solutions
+
+Question  1
+Correct response  is "7"
+
+Question  2
+Correct response is "7"
+
+Question  3
+Correct response is "1"
+
+Question  4
+Correct response is c, "For every value in the map, there is a unique
+key that it associates to that value. "
+
+Question  5
+Correct response is d, "If we create an empty ArrayList<String> and an empty  LinkedList<String> and add the same 3 strings to them,   toString() will return the same result for both lists.
+
+Question  6
+Correct response is b, "elements in b but not in a"
+
+Question  7
+Correct response is a, "the largest value in the map"
+
+Question  8
+Correct response is id="2" "O(N)
+
+Question  9
+Correct response is d, "{ "cf", "df",  "abcf", "abdf", "ef" }"
+
+Question  10
+Correct response is d, "abcc"
+
+Question  11
+    public static int prod(Set<Integer> set){
+        int result = 1;
+        for (int i : set){
+            result *= i;
+        }
+        return result;
+    }
+    
+Question  12
+    public static List<String> select(int k, List<String> list){
+        List<String> result = new ArrayList<String>();
+        for (String e : list){
+            if (e.length() == k){
+                result.add(e);
+            }
+        }
+        return result;
+    }
+    
+Question  13
+    public static List<String> findAllFlightIDs(String s)
+    {
+        List<String> result = new ArrayList<String>();
+        String r = "[A-Z][A-Z][ ]?\\d\\d\\d\\d?";
+        Pattern p = Pattern.compile(r);
+        Matcher m = p.matcher(s);
+        while (m.find())
+        {
+            result.add(s.substring(m.start(),m.end()));
+        }
+        return result;
+    }
+    
+Question  14
+    public static Set<String> filter(String s, Map<Integer,String> map){
+        Set<String> result = new HashSet<String>();
+        for (int key : map.keySet()){
+            if (map.get(key).compareTo(s) > 0){
+                result.add(map.get(key));
+            }
+        }
+        return result;
+    }
+    
+Question  15
+    public static Map<String,Set<String>> mapUnion(Map<String,Set<String>> m1, Map<String,Set<String>> m2) {
+        Map<String,Set<String>> mr = new TreeMap<String,Set<String>>();
+        for (String s : m1.keySet()){
+            mr.put(s, new TreeSet<String>(m1.get(s)));
+        }
+        for (String s : m2.keySet()){
+            if (mr.containsKey(s)){
+                for (String sv : m2.get(s)){
+                    mr.get(s).add(sv);
+                }
+            } else {
+                mr.put(s, new TreeSet<String>(m2.get(s)));
+            }
+        }
+        return mr;
+    }
+

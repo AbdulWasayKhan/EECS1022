@@ -1,0 +1,96 @@
+EECS1022 S19 Test 3 Version A Solutions
+
+Question  1
+Correct response  is "5"
+
+Question  2
+Correct response is "13"
+
+Question  3
+Correct response is "17"
+
+Question  4
+Correct response is b, "List<String> represents ordered collections but Set<String> represents unordered collections"
+
+Question  5
+Correct response is d, "For any method in Set<String>, the versions of the method defined by HashSet<String> and that defined by TreeSet<String> have the same computational compexity"
+
+Question  6
+Correct response is c, "elements in the intersection of a and b"
+
+Question  7
+Correct response is c, "the smallest value in the map"
+
+Question  8
+Correct response is d, "O(N^2)"
+
+Question  9
+Correct response is c, "{ "acf", "adf", "abcf", "abdf", "aef", "abef" }"
+
+Question  10
+Correct response is e, "none of the above"
+
+Question  11
+    public static int sum(List<Integer> list){
+        int result = 0;
+        for (int i : list){
+            result += i;
+        }
+        return result;
+    }
+
+Question  12
+    public static List<String> select(String s, List<String> list){
+        List<String> result = new ArrayList<String>();
+        for (String e : list){
+            if (e.compareTo(s) < 0){
+                result.add(e);
+            }
+        }
+        return result;
+    }
+
+Question  13
+    public static List<String> findAllSerialNos(String s)
+    {
+        List<String> result = new ArrayList<String>();
+        String r = "SN\\d+[A-Z][A-Z]";
+        Pattern p = Pattern.compile(r);
+        Matcher m = p.matcher(s);
+        while (m.find())
+        {
+            result.add(s.substring(m.start(),m.end()));
+        }
+        return result;
+    }
+
+Question  14
+    public static Set<String> filter(int k, Map<Integer,String> map){
+        Set<String> result = new HashSet<String>();
+        for (int key : map.keySet()){
+            if (map.get(key).length() == k){
+                result.add(map.get(key));
+            }
+        }
+        return result;
+    }
+
+Question  15
+    public static Map<String,Set<String>> mapIntersect(Map<String,Set<String>> m1, Map<String,Set<String>> m2) {
+        Map<String,Set<String>> mr = new TreeMap<String,Set<String>>();
+        for (String k : m1.keySet()){
+            if(m2.containsKey(k)){
+                TreeSet<String> kv = new TreeSet<String>();
+                for(String s : m1.get(k)){
+                    if(m2.get(k).contains(s)){
+                        kv.add(s);
+                    }
+                }
+                mr.put(k,kv);
+            }
+        }
+        return mr;
+    }
+
+
+
